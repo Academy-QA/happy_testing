@@ -86,7 +86,7 @@ You can modify the components in `src/app` to adapt the app to your needs.
 
 1. Clone the repository and enter the directory:
 	```bash
-	git clone <REPO_URL>
+	git clone https://github.com/Academy-QA/happy_testing.git
 	cd happy_testing
 	```
 2. Install dependencies:
