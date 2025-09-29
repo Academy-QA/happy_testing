@@ -47,25 +47,6 @@ Web application built with Next.js and PostgreSQL for managing healthy dishes.
 	sudo apt install postgresql postgresql-contrib
 	```
 
-## Installation and Usage
-1. Install dependencies:
-	```bash
-	npm install
-	```
-2. Set up your PostgreSQL database and configure the `DATABASE_URL` variable in `.env`:
-	```env
-	DATABASE_URL="postgresql://user:password@localhost:5432/nutriapp"
-	```
-3. Run migrations:
-	```bash
-	npx prisma migrate dev --name init
-	```
-4. Start the application:
-	```bash
-	npm run dev
-	```
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
-
 ## Main Structure
 - `/register`: User registration
 - `/login`: Login
