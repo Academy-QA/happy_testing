@@ -52,27 +52,32 @@ export default function RegisterPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block mb-1 font-semibold text-gray-700">Nombre</label>
-              <input type="text" name="firstName" placeholder="Nombre" value={form.firstName} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required autoFocus />
+              <input id="register-firstName" type="text" name="firstName" placeholder="Nombre" value={form.firstName} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required autoFocus data-testid="register-firstName" />
             </div>
             <div>
               <label className="block mb-1 font-semibold text-gray-700">Apellido</label>
               <input type="text" name="lastName" placeholder="Apellido" value={form.lastName} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required />
+              <input id="register-lastName" type="text" name="lastName" placeholder="Apellido" value={form.lastName} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required data-testid="register-lastName" />
             </div>
             <div className="md:col-span-2">
               <label className="block mb-1 font-semibold text-gray-700">Email</label>
               <input type="email" name="email" placeholder="ejemplo@correo.com" value={form.email} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required />
+              <input id="register-email" type="email" name="email" placeholder="ejemplo@correo.com" value={form.email} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required data-testid="register-email" />
             </div>
             <div>
               <label className="block mb-1 font-semibold text-gray-700">Nacionalidad</label>
               <input type="text" name="nationality" placeholder="Nacionalidad" value={form.nationality} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required />
+              <input id="register-nationality" type="text" name="nationality" placeholder="Nacionalidad" value={form.nationality} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required data-testid="register-nationality" />
             </div>
             <div>
               <label className="block mb-1 font-semibold text-gray-700">Celular</label>
               <input type="tel" name="phone" placeholder="Celular" value={form.phone} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required />
+              <input id="register-phone" type="tel" name="phone" placeholder="Celular" value={form.phone} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required data-testid="register-phone" />
             </div>
             <div className="md:col-span-2">
               <label className="block mb-1 font-semibold text-gray-700">Contraseña</label>
               <input type="password" name="password" placeholder="Contraseña" value={form.password} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required />
+              <input id="register-password" type="password" name="password" placeholder="Contraseña" value={form.password} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required data-testid="register-password" />
             </div>
           </div>
           {error && <p className="text-red-500 text-center">{error}</p>}

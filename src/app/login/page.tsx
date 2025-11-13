@@ -44,14 +44,14 @@ export default function LoginPage() {
         <form className="space-y-6 w-full" onSubmit={handleSubmit} autoComplete="on">
           <div>
             <label className="block mb-1 font-semibold text-gray-700">Email</label>
-            <input type="email" name="email" placeholder="ejemplo@correo.com" value={form.email} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required autoFocus />
+            <input type="email" name="email" placeholder="ejemplo@correo.com" value={form.email} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required autoFocus data-testid="login-email" />
           </div>
           <div>
             <label className="block mb-1 font-semibold text-gray-700">Contraseña</label>
-            <input type="password" name="password" placeholder="Tu contraseña" value={form.password} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required />
+            <input type="password" name="password" placeholder="Tu contraseña" value={form.password} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required data-testid="login-password" />
           </div>
           {error && <p className="text-red-500 text-center">{error}</p>}
-          <button type="submit" className="w-full bg-green-500 text-white py-3 rounded-xl font-bold text-lg hover:bg-green-600 transition shadow focus:outline-none focus:ring-2 focus:ring-green-300" disabled={loading}>
+          <button type="submit" className="w-full bg-green-500 text-white py-3 rounded-xl font-bold text-lg hover:bg-green-600 transition shadow focus:outline-none focus:ring-2 focus:ring-green-300" disabled={loading} data-testid="login-submit">
             {loading ? 'Ingresando...' : 'Iniciar sesión'}
           </button>
         </form>

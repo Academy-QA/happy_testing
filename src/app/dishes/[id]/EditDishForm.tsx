@@ -86,19 +86,19 @@ export default function EditDishForm({ id }: { id: string }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block mb-1 font-semibold">Nombre</label>
-              <input name="name" value={form.name} onChange={handleChange} className="w-full border rounded p-3 text-lg" required placeholder="Nombre del platillo" />
+              <input name="name" value={form.name} onChange={handleChange} className="w-full border rounded p-3 text-lg" required placeholder="Nombre del platillo" data-testid="edit-dish-name" />
             </div>
             <div>
               <label className="block mb-1 font-semibold">Calorías totales</label>
-              <input type="number" name="calories" value={form.calories || ''} onChange={handleChange} className="w-full border rounded p-3 text-lg" placeholder="Calorías" min="0" />
+              <input type="number" name="calories" value={form.calories || ''} onChange={handleChange} className="w-full border rounded p-3 text-lg" placeholder="Calorías" min="0" data-testid="edit-dish-calories" />
             </div>
             <div className="md:col-span-2">
               <label className="block mb-1 font-semibold">Descripción</label>
-              <textarea name="description" value={form.description} onChange={handleChange} className="w-full border rounded p-3 text-lg" required placeholder="Descripción del platillo" />
+              <textarea name="description" value={form.description} onChange={handleChange} className="w-full border rounded p-3 text-lg" required placeholder="Descripción del platillo" data-testid="edit-dish-description" />
             </div>
             <div>
               <label className="block mb-1 font-semibold">Min. preparación</label>
-              <input type="number" name="prepTime" value={form.prepTime} onChange={handleChange} className="w-full border rounded p-3 text-lg" required />
+              <input type="number" name="prepTime" value={form.prepTime} onChange={handleChange} className="w-full border rounded p-3 text-lg" required data-testid="edit-dish-prepTime" />
             </div>
             <div>
               <label className="block mb-1 font-semibold">Min. cocción</label>

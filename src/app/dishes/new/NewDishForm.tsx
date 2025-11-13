@@ -68,11 +68,11 @@ export default function NewDishForm() {
         <h2 className="text-xl font-bold text-green-600 mb-2">Información básica</h2>
         <div>
           <label className="block mb-1 font-semibold text-gray-700">Nombre</label>
-          <input name="name" value={form.name} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required autoFocus placeholder="Ej: Ensalada de quinoa" />
+          <input name="name" value={form.name} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required autoFocus placeholder="Ej: Ensalada de quinoa" data-testid="dish-name" />
         </div>
         <div>
           <label className="block mb-1 font-semibold text-gray-700">Descripción</label>
-          <textarea name="description" value={form.description} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required placeholder="Describe el platillo, ingredientes principales, etc." />
+          <textarea name="description" value={form.description} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required placeholder="Describe el platillo, ingredientes principales, etc." data-testid="dish-description" />
         </div>
         <div className="flex items-center gap-2">
           <input type="checkbox" name="quickPrep" checked={form.quickPrep} onChange={handleChange} id="quickPrep" className="accent-green-500 w-5 h-5" />
@@ -85,20 +85,20 @@ export default function NewDishForm() {
         <div className="flex gap-4">
           <div className="flex-1">
             <label className="block mb-1 font-semibold text-gray-700">Min. preparación</label>
-            <input type="number" name="prepTime" value={form.prepTime} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required min="0" placeholder="Ej: 10" />
+            <input type="number" name="prepTime" value={form.prepTime} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required min="0" placeholder="Ej: 10" data-testid="dish-prepTime" />
           </div>
           <div className="flex-1">
             <label className="block mb-1 font-semibold text-gray-700">Min. cocción</label>
-            <input type="number" name="cookTime" value={form.cookTime} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required min="0" placeholder="Ej: 15" />
+            <input type="number" name="cookTime" value={form.cookTime} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" required min="0" placeholder="Ej: 15" data-testid="dish-cookTime" />
           </div>
         </div>
         <div>
           <label className="block mb-1 font-semibold text-gray-700">Calorías totales</label>
-          <input type="number" name="calories" value={form.calories} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" min="0" placeholder="Ej: 350" />
+          <input type="number" name="calories" value={form.calories} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" min="0" placeholder="Ej: 350" data-testid="dish-calories" />
         </div>
         <div>
           <label className="block mb-1 font-semibold text-gray-700">URL de imagen</label>
-          <input name="imageUrl" value={form.imageUrl} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" placeholder="https://..." />
+          <input name="imageUrl" value={form.imageUrl} onChange={handleChange} className="w-full border border-gray-300 rounded-lg p-3 text-lg focus:ring-2 focus:ring-green-200 focus:outline-none" placeholder="https://..." data-testid="dish-imageUrl" />
         </div>
       </div>
       <div className="md:col-span-2 mt-4">
